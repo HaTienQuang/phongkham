@@ -46,3 +46,4 @@ export default function AntdProvider({ children }: { children: React.ReactNode }
     </AntdRegistry>
   );
 }
+

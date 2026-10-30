@@ -162,7 +162,7 @@ export default function Header() {
           placement="right"
           onClose={() => setDrawerOpen(false)}
           open={drawerOpen}
-          width={300}
+          size="default"
         >
           <div className="flex flex-col space-y-4 text-base font-semibold text-slate-800">
             <Link href="#hero" onClick={() => setDrawerOpen(false)} className="hover:text-teal-700 py-1">
