@@ -11,7 +11,6 @@ import {
   CalendarOutlined,
   SafetyCertificateFilled,
   MenuOutlined,
-  HeartFilled,
 } from "@ant-design/icons";
 import { CLINIC_INFO } from "@/lib/utils";
 
@@ -68,7 +67,7 @@ export default function Header() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between gap-4">
           
-          {/* Logo & Brand Azalea (shrink-0 so never squeezed) */}
+          {/* Logo & Brand Azalea */}
           <Link href="/" className="flex items-center gap-3 shrink-0 group">
             <div className="relative w-12 h-12 overflow-hidden rounded-xl border border-amber-500/40 shadow-sm bg-black shrink-0 transition-transform group-hover:scale-105">
               <Image
@@ -94,7 +93,7 @@ export default function Header() {
             </div>
           </Link>
 
-          {/* Desktop Menu links (Clean spacing, nowrap, NO overlap) */}
+          {/* Desktop Menu links */}
           <div className="hidden lg:flex items-center space-x-6 xl:space-x-8 text-[14px] font-bold text-slate-700">
             <Link
               href="#hero"
@@ -137,7 +136,7 @@ export default function Header() {
             </Link>
           </div>
 
-          {/* Header Action Buttons (shrink-0) */}
+          {/* Header Action Buttons */}
           <div className="hidden md:flex items-center gap-3 shrink-0">
             <Button
               type="default"

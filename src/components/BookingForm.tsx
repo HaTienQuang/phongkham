@@ -70,7 +70,7 @@ export default function BookingForm() {
 
       if (response.ok && resData.success) {
         setSubmitted(true);
-        message.success("Đặt lịch khám thành công! Nhân viên y tế Azalea sẽ liên hệ quý khách.");
+        message.success("Đặt lịch khám thành công! Nhân viên y tế Azelea sẽ liên hệ quý khách.");
       } else {
         setErrorMsg(resData.message || "Có lỗi xảy ra khi gửi thông tin. Vui lòng gọi trực tiếp Hotline.");
       }
