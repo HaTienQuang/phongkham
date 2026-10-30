@@ -11,3 +11,4 @@ export default function robots(): MetadataRoute.Robots {
     sitemap: `${CLINIC_INFO.domain}/sitemap.xml`,
   };
 }
+

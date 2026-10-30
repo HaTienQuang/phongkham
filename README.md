@@ -64,3 +64,4 @@ Dự án Landing Page phòng khám đa khoa kỹ thuật cao xây dựng bằng 
 Trong file `src/components/AnalyticsTracker.tsx` và `src/app/layout.tsx`:
 - **Google Ads:** Chèn ID chuyển đổi (GTAG) để đo lường cuộc gọi và lượt gửi form thành công.
 - **Facebook / TikTok / Zalo Pixel:** Dán mã script vào thẻ `<head>` để tối ưu tệp đối tượng chuyển đổi.
+
