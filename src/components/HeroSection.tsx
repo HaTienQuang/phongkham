@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Button, Tag, Rate, Card } from "antd";
+import { Button, Tag, Rate } from "antd";
 import {
   SafetyCertificateFilled,
   PhoneOutlined,
@@ -37,7 +37,7 @@ export default function HeroSection() {
             <div className="inline-flex items-center gap-2">
               <Tag
                 color="cyan"
-                className="px-3 py-1 rounded-full text-xs sm:text-sm font-semibold border-teal-200 flex items-center gap-1.5 shadow-sm m-0"
+                className="px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-semibold border-teal-200 flex items-center gap-2 shadow-sm m-0"
               >
                 <HeartFilled className="text-teal-700 animate-pulse" />
                 <span>Phòng Khám Đa Khoa Quốc Tế Azalea • Chuẩn Y Khoa 5 Sao</span>
@@ -55,7 +55,7 @@ export default function HeroSection() {
 
             {/* Sub-headline */}
             <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
-              Đội ngũ Bác sĩ Chuyên khoa hơn 16 năm kinh nghiệm từ các bệnh viện tuyến trung ương. Hệ thống xét nghiệm kỹ thuật cao & siêu âm dải tần 4K trả kết quả sau 45 phút, quy trình khám 1 Bác Sĩ : 1 Bệnh Nhân không chờ đợi.
+              Đội ngũ Bác sĩ Chuyên khoa 1 hơn 15 năm kinh nghiệm trực tiếp thăm khám. Hệ thống máy móc cận lâm sàng hiện đại, xét nghiệm nhanh sau 45 phút, quy trình khám 1 Bác Sĩ : 1 Bệnh Nhân không chờ đợi.
             </p>
 
             {/* Trust points with Ant Design Icons */}
@@ -104,7 +104,7 @@ export default function HeroSection() {
               </Button>
             </div>
 
-            {/* Social Proof with Ant Design Rate */}
+            {/* Social Proof */}
             <div className="pt-2 flex items-center justify-center lg:justify-start gap-3">
               <Rate disabled defaultValue={5} className="text-sm text-amber-500" />
               <span className="text-xs text-slate-500 font-medium">
@@ -113,7 +113,7 @@ export default function HeroSection() {
             </div>
           </motion.div>
 
-          {/* Right Column: Hero Doctor Azalea Portrait */}
+          {/* Right Column: Hero Doctor Trần Đức Mạnh Portrait */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -122,41 +122,31 @@ export default function HeroSection() {
           >
             <div className="relative mx-auto max-w-md">
               {/* Decorative background aura */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-teal-600 to-emerald-400 rounded-3xl rotate-2 transform scale-100 opacity-20 blur-xl" />
+              <div className="absolute inset-0 bg-gradient-to-tr from-amber-500 via-teal-600 to-emerald-400 rounded-3xl rotate-2 transform scale-100 opacity-20 blur-xl" />
               
-              {/* Doctor Main Image with Azalea Branding */}
-              <div className="relative rounded-3xl overflow-hidden border-4 border-white shadow-2xl bg-white aspect-[4/5] group">
+              {/* Doctor Main Image (Real doctor.jpg of Azalea) */}
+              <div className="relative rounded-3xl overflow-hidden border-4 border-white shadow-2xl bg-white aspect-[9/16] max-h-[540px] group">
                 <Image
                   src={CLINIC_INFO.images.doctor}
-                  alt="Bác sĩ Trưởng khoa Phòng Khám Azalea"
+                  alt="Bác sĩ Chuyên khoa 1 Trần Đức Mạnh - Azalea Clinic"
                   fill
-                  className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  className="object-cover object-top transition-transform duration-500 group-hover:scale-102"
                   priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/20 to-transparent" />
-                
-                {/* Doctor Overlay Info */}
-                <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-teal-600/90 backdrop-blur-sm rounded-lg text-xs font-bold uppercase tracking-wider mb-1.5">
-                    <CheckCircleFilled /> Bác Sĩ Chuyên Khoa I • Azalea
-                  </div>
-                  <h3 className="text-xl font-bold">BSCKI. Nguyễn Hoàng Nam</h3>
-                  <p className="text-xs text-slate-200">Trưởng Hội Đồng Chuyên Môn - Phòng Khám Đa Khoa Quốc Tế Azalea</p>
-                </div>
               </div>
 
-              {/* Floating Badge 1 (Ant Design Card style) */}
+              {/* Floating Badge 1 */}
               <motion.div
                 animate={{ y: [-5, 5, -5] }}
                 transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-                className="absolute -top-4 -right-4 bg-white/95 backdrop-blur-md p-3 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3 z-20"
+                className="absolute -top-3 -right-3 bg-white/95 backdrop-blur-md p-3 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3 z-20"
               >
-                <div className="w-10 h-10 rounded-xl bg-teal-100 text-teal-800 flex items-center justify-center font-bold text-lg">
-                  <SafetyCertificateFilled className="text-teal-700" />
+                <div className="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center font-bold text-lg">
+                  <SafetyCertificateFilled className="text-amber-600" />
                 </div>
                 <div>
-                  <div className="text-xs font-bold text-slate-900">Bác Sĩ Tuyến TW</div>
-                  <div className="text-[10px] text-slate-500">16+ Năm Kinh Nghiệm</div>
+                  <div className="text-xs font-bold text-slate-900">{CLINIC_INFO.doctor.title}</div>
+                  <div className="text-[10px] text-slate-500">15+ Năm Kinh Nghiệm</div>
                 </div>
               </motion.div>
 
@@ -164,14 +154,14 @@ export default function HeroSection() {
               <motion.div
                 animate={{ y: [5, -5, 5] }}
                 transition={{ repeat: Infinity, duration: 4.5, ease: "easeInOut" }}
-                className="absolute -bottom-5 -left-4 bg-white/95 backdrop-blur-md p-3 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3 z-20"
+                className="absolute -bottom-4 -left-3 bg-white/95 backdrop-blur-md p-3 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3 z-20"
               >
-                <div className="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center text-lg">
-                  <StarFilled className="text-emerald-600" />
+                <div className="w-10 h-10 rounded-xl bg-teal-100 text-teal-800 flex items-center justify-center text-lg">
+                  <StarFilled className="text-teal-700" />
                 </div>
                 <div>
-                  <div className="text-xs font-bold text-slate-900">Chuẩn Quốc Tế</div>
-                  <div className="text-[10px] text-slate-500">Trang Thiết Bị 2026</div>
+                  <div className="text-xs font-bold text-slate-900">Bác Sĩ Trực Tiếp Khám</div>
+                  <div className="text-[10px] text-slate-500">Tận tâm • Chu đáo 1:1</div>
                 </div>
               </motion.div>
 

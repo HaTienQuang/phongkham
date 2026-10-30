@@ -20,13 +20,12 @@ export default function Footer() {
           {/* Brand & Clinic Bio (5 cols) */}
           <div className="lg:col-span-5 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="relative w-12 h-12 overflow-hidden rounded-xl bg-white p-0.5 border border-teal-500/30">
+              <div className="relative w-12 h-12 overflow-hidden rounded-xl bg-black border border-amber-400/40 shrink-0">
                 <Image
                   src={CLINIC_INFO.images.logo}
                   alt="Logo Azalea Clinic"
-                  width={48}
-                  height={48}
-                  className="object-contain w-full h-full"
+                  fill
+                  className="object-cover"
                 />
               </div>
               <div>
