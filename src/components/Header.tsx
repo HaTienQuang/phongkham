@@ -94,17 +94,14 @@ export default function Header() {
           </Link>
 
           {/* Desktop Menu links */}
-          <div className="hidden lg:flex items-center space-x-6 xl:space-x-8 text-[14px] font-bold text-slate-700">
-            <Link
-              href="#hero"
-              className="hover:text-teal-700 transition whitespace-nowrap"
-            >
+          <div className="hidden lg:flex items-center space-x-5 xl:space-x-7 text-[13.5px] font-bold text-slate-700">
+            <Link href="#hero" className="hover:text-teal-700 transition whitespace-nowrap">
               Trang Chủ
             </Link>
-            <Link
-              href="#dich-vu"
-              className="hover:text-teal-700 transition whitespace-nowrap"
-            >
+            <Link href="#gioi-thieu" className="hover:text-teal-700 transition whitespace-nowrap">
+              Về Azalea
+            </Link>
+            <Link href="#dich-vu" className="hover:text-teal-700 transition whitespace-nowrap">
               Chuyên Khoa
             </Link>
             <Link
@@ -116,34 +113,31 @@ export default function Header() {
                 -35%
               </span>
             </Link>
-            <Link
-              href="#bac-si"
-              className="hover:text-teal-700 transition whitespace-nowrap"
-            >
-              Bác Sĩ Trưởng Khoa
+            <Link href="#bac-si" className="hover:text-teal-700 transition whitespace-nowrap">
+              Bác Sĩ
             </Link>
-            <Link
-              href="#quy-trinh"
-              className="hover:text-teal-700 transition whitespace-nowrap"
-            >
-              Quy Trình Khám
+            <Link href="#bang-gia" className="hover:text-teal-700 transition whitespace-nowrap">
+              Bảng Giá
             </Link>
-            <Link
-              href="#faq"
-              className="hover:text-teal-700 transition whitespace-nowrap"
-            >
-              Hỏi Đáp
+            <Link href="#quy-trinh" className="hover:text-teal-700 transition whitespace-nowrap">
+              Quy Trình
+            </Link>
+            <Link href="#bai-viet" className="hover:text-teal-700 transition whitespace-nowrap">
+              Cẩm Nang
+            </Link>
+            <Link href="#dia-chi" className="hover:text-teal-700 transition whitespace-nowrap">
+              Liên Hệ
             </Link>
           </div>
 
           {/* Header Action Buttons */}
-          <div className="hidden md:flex items-center gap-3 shrink-0">
+          <div className="hidden md:flex items-center gap-2.5 shrink-0">
             <Button
               type="default"
               shape="round"
               icon={<PhoneOutlined className="text-teal-700" />}
               href={`tel:${CLINIC_INFO.hotlineClean}`}
-              className="border-slate-300 font-bold hover:!text-teal-700 hover:!border-teal-700"
+              className="border-slate-300 font-bold hover:!text-teal-700 hover:!border-teal-700 text-xs sm:text-sm"
             >
               {CLINIC_INFO.hotline}
             </Button>
@@ -152,7 +146,7 @@ export default function Header() {
               shape="round"
               icon={<CalendarOutlined />}
               href="#dat-lich"
-              className="bg-teal-700 hover:!bg-teal-800 shadow-md shadow-teal-700/20 font-bold"
+              className="bg-teal-700 hover:!bg-teal-800 shadow-md shadow-teal-700/20 font-bold text-xs sm:text-sm"
             >
               Đặt Lịch Khám
             </Button>
@@ -183,9 +177,12 @@ export default function Header() {
           open={drawerOpen}
           size="default"
         >
-          <div className="flex flex-col space-y-4 text-base font-semibold text-slate-800">
+          <div className="flex flex-col space-y-3.5 text-base font-semibold text-slate-800">
             <Link href="#hero" onClick={() => setDrawerOpen(false)} className="hover:text-teal-700 py-1">
               Trang Chủ
+            </Link>
+            <Link href="#gioi-thieu" onClick={() => setDrawerOpen(false)} className="hover:text-teal-700 py-1">
+              Về Azalea & 6 Cam Kết Vàng
             </Link>
             <Link href="#dich-vu" onClick={() => setDrawerOpen(false)} className="hover:text-teal-700 py-1">
               Chuyên Khoa & Dịch Vụ
@@ -197,14 +194,23 @@ export default function Header() {
             <Link href="#bac-si" onClick={() => setDrawerOpen(false)} className="hover:text-teal-700 py-1">
               Bác Sĩ Trưởng Khoa Azalea
             </Link>
+            <Link href="#bang-gia" onClick={() => setDrawerOpen(false)} className="hover:text-teal-700 py-1">
+              Bảng Giá Niêm Yết Công Khai
+            </Link>
             <Link href="#quy-trinh" onClick={() => setDrawerOpen(false)} className="hover:text-teal-700 py-1">
               Quy Trình Khám Nhanh 1:1
             </Link>
             <Link href="#faq" onClick={() => setDrawerOpen(false)} className="hover:text-teal-700 py-1">
               Hỏi Đáp Chuyên Môn
             </Link>
+            <Link href="#bai-viet" onClick={() => setDrawerOpen(false)} className="hover:text-teal-700 py-1">
+              Cẩm Nang Y Khoa
+            </Link>
+            <Link href="#dia-chi" onClick={() => setDrawerOpen(false)} className="hover:text-teal-700 py-1">
+              Vị Trí & Bản Đồ Chỉ Đường
+            </Link>
 
-            <div className="pt-6 border-t border-slate-100 flex flex-col gap-3">
+            <div className="pt-5 border-t border-slate-100 flex flex-col gap-2.5">
               <Button
                 type="primary"
                 block
